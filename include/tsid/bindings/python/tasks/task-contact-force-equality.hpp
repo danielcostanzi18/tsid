@@ -41,6 +41,21 @@ struct TaskContactForceEqualityPythonVisitor
                    contacts::ContactBase &>((bp::arg("name"), bp::arg("robot"),
                                              bp::arg("dt"), bp::arg("contact")),
                                             "Default Constructor"))
+        .def(
+          bp::init<std::string, robots::RobotWrapper &, double,
+                   contacts::Contact6d &>((bp::arg("name"), bp::arg("robot"),
+                                             bp::arg("dt"), bp::arg("contact")),
+                                            "Constructor with Contact6d"))
+        .def(
+          bp::init<std::string, robots::RobotWrapper &, double,
+                   contacts::ContactPoint &>((bp::arg("name"), bp::arg("robot"),
+                                               bp::arg("dt"), bp::arg("contact")),
+                                              "Constructor with ContactPoint"))
+        .def(
+          bp::init<std::string, robots::RobotWrapper &, double,
+                   contacts::ContactTwoFramePositions &>((bp::arg("name"), bp::arg("robot"),
+                                               bp::arg("dt"), bp::arg("contact")),
+                                              "Constructor with ContactTwoFramePositions"))
         .add_property("dim", &TaskContactForceEquality::dim,
                       "return dimension size")
         .def("setReference",

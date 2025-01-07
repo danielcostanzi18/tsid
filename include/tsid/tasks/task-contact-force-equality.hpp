@@ -23,6 +23,9 @@
 #include "tsid/trajectories/trajectory-base.hpp"
 #include "tsid/math/constraint-equality.hpp"
 #include "tsid/contacts/contact-base.hpp"
+#include "tsid/contacts/contact-6d.hpp"
+#include "tsid/contacts/contact-point.hpp"
+#include "tsid/contacts/contact-two-frame-positions.hpp"
 
 namespace tsid {
 namespace tasks {
